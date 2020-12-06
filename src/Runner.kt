@@ -1,6 +1,4 @@
-import java.util.regex.Pattern
-import java.util.stream.Collectors
-
-fun main(args: Array<String>) {
-
+fun main() {
+    Episode.readFromFinalGear("https://forums.finalgear.com/threads/10x00-july-25th-2007-polar-special.20981/")
+            .printSongs()
 }
