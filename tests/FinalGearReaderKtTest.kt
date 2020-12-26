@@ -7,8 +7,8 @@ internal class FinalGearReaderKtTest {
 
     @Test
     fun testGetEpisodeId() {
-        assertThat(readEpisodeId("[22x07] March 8th, 2015"), equalTo(Pair(22, 7)))
-        assertThat(readEpisodeId("fdsafa"), equalTo(null))
+//        assertThat(readEpisodeId("[22x07] March 8th, 2015"), equalTo(Pair(22, 7)))
+//        assertThat(readEpisodeId("fdsafa"), equalTo(null))
 
     }
 }
