@@ -1,6 +1,10 @@
 import java.io.Serializable
 
-class Time private constructor(val value: Int) : Comparable<Time>, Serializable {
+/**
+ * A simple class representing the number of minutes and seconds elapsed after some arbitrary epoch. Internally stores
+ * the number of seconds elapsed.
+ */
+class Time private constructor(private val value: Int) : Comparable<Time>, Serializable {
 
     constructor(minutes: Int, seconds: Int) : this(minutes * 60 + seconds)
 
@@ -9,7 +13,7 @@ class Time private constructor(val value: Int) : Comparable<Time>, Serializable 
     val seconds
         get() = value % 60
 
-    override fun compareTo(other: Time) = value - other.value
+    override fun compareTo(other: Time) = value.compareTo(value)
 
     operator fun inc(): Time = Time(value + 1)
 
